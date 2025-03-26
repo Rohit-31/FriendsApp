@@ -1,4 +1,3 @@
-import jdk.internal.jshell.debug.InternalDebugControl.release
 
 plugins {
     alias(libs.plugins.android.application)
