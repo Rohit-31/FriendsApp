@@ -1,3 +1,5 @@
+import jdk.internal.jshell.debug.InternalDebugControl.release
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -18,9 +20,18 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    /*signingConfigs {
+        release {
+            storeFile file("../release.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }*/
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -32,7 +43,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
