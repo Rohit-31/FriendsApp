@@ -1,15 +1,22 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+
+# Generated files
+build/
+*.apk
+output.json
+
+
+# Local configurations - sdk path,etc
 local.properties
+
+# gradle generated files
+.gradle/
+
+# Android Studio
+.idea/
+*.iml
+
+node_modules/
+
+# where profiling captures are saved
+captures/
+
